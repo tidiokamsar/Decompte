@@ -1,0 +1,46 @@
+{
+  "name": "edecompte-ageroute",
+  "version": "1.0.0",
+  "description": "Module e-Décompte AGEROUTE Guinée - Système de gestion, contrôle, validation et paiement des décomptes",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm --workspace=backend install && npm --workspace=frontend install",
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "start": "npm start --workspace=backend",
+    "test": "npm test --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v",
+    "migrate": "npm run db:migrate --workspace=backend",
+    "seed": "npm run db:seed --workspace=backend"
+  },
+  "keywords": [
+    "decomptes",
+    "ageroute",
+    "guinee",
+    "infrastructure",
+    "gestion",
+    "validation",
+    "paiement"
+  ],
+  "author": "AGEROUTE Guinée",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tidiokamsar/Decompte.git"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "eslint": "^8.50.0"
+  }
+}
